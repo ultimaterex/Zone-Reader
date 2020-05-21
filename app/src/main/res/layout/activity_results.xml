@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    style="@style/resultsTextViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3949AB"
+    tools:context=".ui.activities.ResultsActivity">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/resultsFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_more_vert" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/resultsFABSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_save"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/resultsFAB"
+        app:layout_constraintEnd_toEndOf="@+id/resultsFAB"
+        app:rippleColor="#AD1457" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/resultFABShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_share"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/resultsFABSave"
+        app:layout_constraintEnd_toEndOf="@+id/resultsFAB"
+        app:rippleColor="#AD1457" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-276dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/resultsStaticImageview"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:src="@drawable/ic_perm_identity_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/resultsDocumentTypeText"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Document Type"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticImageview"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticImageview"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticImageview" />
+
+            <TextView
+                android:id="@+id/resultsStaticSurnameText"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="Surname"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resultsDocumentTypeText" />
+
+            <EditText
+                android:id="@+id/resultsSurnameInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticSurnameText" />
+
+            <TextView
+                android:id="@+id/reusltsStaticGnameText"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="GIVEN NAMES"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/resultsSurnameInput"
+                app:layout_constraintStart_toStartOf="@+id/resultsSurnameInput"
+                app:layout_constraintTop_toBottomOf="@+id/resultsSurnameInput" />
+
+            <EditText
+                android:id="@+id/resultsGNameInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/reusltsStaticGnameText" />
+
+            <TextView
+                android:id="@+id/resultsStaticDocumentNumberText"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Document Number"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/resultsGNameInput"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsGNameInput"
+                app:layout_constraintTop_toBottomOf="@+id/resultsGNameInput" />
+
+            <EditText
+                android:id="@+id/resultsDocumentNumberInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticDocumentNumberText" />
+
+
+            <TextView
+                android:id="@+id/resultsStaticNationalityText"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nationality"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticIssueCountryText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticIssueCountryText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsIssueCountryInput" />
+
+            <EditText
+                android:id="@+id/resultsIssueCountryInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticIssueCountryText" />
+
+            <TextView
+                android:id="@+id/resultsStaticIssueCountryText"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Issuing Country"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticDocumentNumberText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticDocumentNumberText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsDocumentNumberInput" />
+
+            <EditText
+                android:id="@+id/resultsNationalityInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticNationalityText" />
+
+            <TextView
+                android:id="@+id/resultsStaticDateOfBirthText"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Date Of Birth"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsNationalityInput" />
+
+            <EditText
+                android:id="@+id/resultsDateOfBirthInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticDateOfBirthText" />
+
+            <TextView
+                android:id="@+id/resultsStaticSexText"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="92dp"
+                android:text="Sex"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsNationalityInput" />
+
+            <EditText
+                android:id="@+id/resultsSexInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticSexText" />
+
+            <TextView
+                android:id="@+id/resultsStaticEstimatedIssueDate"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Estimated Issuing Date"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsSexInput" />
+
+            <EditText
+                android:id="@+id/resultsEstimatedIssueDateInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="date"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticEstimatedIssueDate" />
+
+            <TextView
+                android:id="@+id/resultsStaticExpirationDate"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Expiration Date"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsSexInput" />
+
+            <EditText
+                android:id="@+id/resultsExpirationDateInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticExpirationDate" />
+
+            <TextView
+                android:id="@+id/resultsStaticOptionalValues"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Optional Values"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticNationalityText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsExpirationDateInput" />
+
+            <EditText
+                android:id="@+id/resultsOptionalValuesInput"
+                style="@style/resultsTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:drawableRight="@drawable/ic_mode_edit_white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/resultsStaticSurnameText"
+                app:layout_constraintTop_toBottomOf="@+id/resultsStaticOptionalValues" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

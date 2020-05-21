@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Zone Reader</string>
+    <string name="developer">Serubii</string>
+
+
+    <string name="aspectRatio">9:16</string>
+
+
+    <!--    Error messages-->
+    <string name="errorFileCreate">There was an error while writing to storage</string>
+
+
+    <!-- Preference Titles -->
+    <string name="scanner_settings">Scanner Settings</string>
+
+    <!-- Messages Preferences -->
+    <string name="username">Username</string>
+
+    <!--    Settings-->
+    <string name="settings">Settings</string>
+
+    <!--    Type Preferences-->
+    <string name="type_support">Type Support</string>
+    <string name="type_TD1">TD1</string>
+    <string name="type_TD2">TD2</string>
+    <string name="type_TD3">TD3</string>
+    <string name="type_legacy">Legacy</string>
+
+    <string name="scan_camera">Legacy Camera</string>
+    <string name="scan_camera_description">Switch to Manual Camera Support</string>
+    <string name="scan_type_disabled">Using New Detection Mode</string>
+    <string name="scan_type_enabled">Using Legacy Detection Mode</string>
+
+    <string name="scan_legacy">Legacy Processing Mode</string>
+    <string name="scan_legacy_description">Switch to Legacy Processing Method</string>
+    <string name="camera_type_disabled">Automatic Camera Enabled</string>
+    <string name="camera_type_enabled">Legacy Camera Enabled</string>
+
+    <string name="type_disabled">Support Has Been Disabled</string>
+    <string name="type_enabled">Support Has Been Enabled</string>
+
+
+</resources>
